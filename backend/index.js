@@ -67,6 +67,42 @@ app.get( '/incrementBy/:amount', ( req, res ) => {
 
 } )
 
+app.get( '/decrement', ( req, res ) => {
+
+    
+   const jsonString = fs.readFileSync( './db.json', 'UTF-8' );
+   const data = JSON.parse( jsonString );
+   
+   data.counterValue -= 1;
+   
+   fs.writeFileSync( './db.json' , JSON.stringify( data))
+
+   res.json( data );
+
+} )
+
+app.get( '/decrementBy/:amount', ( req, res ) => {
+
+   // READ JSON FROM ROM
+   const jsonString = fs.readFileSync( './db.json', 'UTF-8' );
+   const data = JSON.parse( jsonString );
+
+
+   let amount = Number( req.params.amount )
+   if (isNaN(amount)) {
+       res.status(500).json({message:'UPS :('})
+       return;
+   }
+   // UPDATE DATA ON RAM
+   data.counterValue += amount;
+
+   // WRITE BACK THE DATA TO ROM
+   fs.writeFileSync( './db.json', JSON.stringify( data ) );
+
+   res.json( data );
+
+} )
+
 
 
 
