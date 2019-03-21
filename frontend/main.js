@@ -50,3 +50,34 @@ document.addEventListener( 'DOMContentLoaded', function () {
         }
     })
 } )
+
+// listener for decrement
+    document.querySelector( 'header .decrement' ).addEventListener( 'click', () => {
+        // increment counter
+
+
+        fetch( baseApiUrl  +'/decrement' )
+            .then (res => res.json())
+            .then( data => {
+                updateCounterDOM(data.counterValue)
+            })
+
+    } )
+//listener for decrement by
+document.querySelector('header .decrementBy').addEventListener('keydown', (ev) => {
+
+    if (ev.keyCode === 13) {
+        let amount = ev.target.value;
+
+        fetch( baseApiUrl + '/decrementBy/' + amount )
+            .then( res => res.json() )
+            .then( data => {
+                updateCounterDOM( data.counterValue )
+                ev.target.value = '';
+            } )
+            .catch(console.error)
+
+
+    }
+})
+
