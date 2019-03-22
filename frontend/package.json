@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "get-contrast-ratio": "^0.1.4"
   }
 }

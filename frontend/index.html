@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tareas</title>
-    <link rel="stylesheet"
-        href="normalize.css">
-    <link rel="stylesheet"
-        href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="./node_modules/get-contrast-ratio/src/index.js"></script> -->
     <script src="main.js"></script>
 
 </head>
+
 <body>
 
     <header>
 
-        <button class="increment">in/decrement once</button>
-
+        <button class="increment">increment once</button>
+        <button class="decrement">decrement once</button>
         <input class="incrementBy" type="number" placeholder="increment by...">
-
+        <input class="decrementBy" type="number" placeholder="decrement by...">
+        <button class="reset">reset</button>
+        </br>
+        <input type="color" class="picker">
     </header>
     <main>
 
@@ -29,4 +33,5 @@
 
     </main>
 </body>
+
 </html>
