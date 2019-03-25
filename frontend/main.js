@@ -34,7 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // listener for increment by
     document.querySelector('header .incrementBy').addEventListener('keyup', (ev) => {
-
+        if (ev.keyCode === 69 || ev.keyCode === 190) {
+            ev.target.value = ""
+        }
         if (ev.keyCode === 13) {
             let amount = ev.target.value;
 
@@ -62,8 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     })
     //listener for decrement by
-    document.querySelector('header .decrementBy').addEventListener('keydown', (ev) => {
+    document.querySelector('header .decrementBy').addEventListener('keyup', (ev) => {
 
+        if (ev.keyCode === 69 || ev.keyCode === 190) {
+            ev.target.value = ""
+        }
         if (ev.keyCode === 13) {
             let amount = ev.target.value;
 

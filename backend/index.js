@@ -100,7 +100,7 @@ app.get('/decrementBy/:amount', (req, res) => {
     // UPDATE DATA ON RAM
     data.counterValue -= amount;
 
-    // WRITE BACK THE DATA TO ROM
+    // WRITE BACK THE DATA TO ROM 
     fs.writeFileSync('./db.json', JSON.stringify(data));
 
     res.json(data);

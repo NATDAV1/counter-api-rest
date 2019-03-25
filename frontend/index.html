@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tareas</title>
+    <title>Tasks</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <!-- <script src="./node_modules/get-contrast-ratio/src/index.js"></script> -->
@@ -16,14 +16,18 @@
 <body>
 
     <header>
-
-        <button class="increment">increment once</button>
-        <button class="decrement">decrement once</button>
-        <input class="incrementBy" type="number" placeholder="increment by...">
-        <input class="decrementBy" type="number" placeholder="decrement by...">
-        <button class="reset">reset</button>
-        </br>
-        <input type="color" class="picker">
+        <div class="flex container">
+            <div>
+                <button class="increment">increment once</button>
+                <input class="incrementBy" type="number" placeholder="increment by...">
+            </div>
+            <div>
+                <button class="decrement">decrement once</button>
+                <input class="decrementBy" type="number" placeholder="decrement by...">
+            </div>
+            <div><button class="reset">reset</button></div>
+            <div><input type="color" class="picker"></div>
+        </div>
     </header>
     <main>
 
